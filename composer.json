@@ -1,0 +1,56 @@
+{
+    "name": "enniosousa/google-fonts-field-for-backpack",
+    "description": "Google Fonts field type for the Backpack for Laravel",
+    "keywords": [
+        "enniosousa",
+        "google-fonts-field-for-backpack",
+        "backpack"
+    ],
+    "homepage": "https://github.com/enniosousa/google-fonts-field-for-backpack",
+    "license": "MIT",
+    "type": "library",
+    "version": "v1.0.0",
+    "minimum-stability": "stable",
+    "authors": [
+        {
+            "name": "Ennio Sousa",
+            "email": "ennio@enniosousa.com.br",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "backpack/crud": "^4.1"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^4.0",
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Enniosousa\\GoogleFontsFieldForBackpack\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Enniosousa\\GoogleFontsFieldForBackpack\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Enniosousa\\GoogleFontsFieldForBackpack\\GoogleFontsFieldForBackpackServiceProvider"
+            ],
+            "aliases": {
+                "GoogleFontsFieldForBackpack": "Enniosousa\\GoogleFontsFieldForBackpack\\GoogleFontsFieldForBackpackFacade"
+            }
+        }
+    }
+}
